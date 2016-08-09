@@ -1,0 +1,7 @@
+-plugin: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name=Equinox; \
+		local=${workspace}/cnf/equinox-neon-repo; \
+		pretty=true\
+
+-releaserepo: Equinox

@@ -1,0 +1,23 @@
+-buildpath: org.eclipse.osgi
+
+Private-Package: equinox.console.sample
+Bundle-Activator: equinox.console.sample.Activator
+
+-runfw: org.eclipse.osgi;version='3.11'
+
+-runee: JavaSE-1.8
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.console)',\
+	osgi.identity;filter:='(osgi.identity=utils.startLazyBundles)'
+
+-runbundles: \
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.eclipse.equinox.console;version='[1.1.200,1.1.201)',\
+	utils.startLazyBundles;version='[1.0.0,1.0.1)'
+
+-runproperties:\
+	activate.lazy.bundles="org.eclipse.equinox.console",\
+	osgi.console=""
+	
